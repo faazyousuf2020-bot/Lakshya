@@ -24,8 +24,6 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - uses: android-actions/setup-android@v3
-
       - name: Install
         run: npm ci
 
@@ -34,7 +32,11 @@ jobs:
 
       - name: Build APK
         working-directory: android
+        env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
+          ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
         run: |
+          yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
           chmod +x gradlew
           ./gradlew assembleRelease --no-daemon --stacktrace
 
