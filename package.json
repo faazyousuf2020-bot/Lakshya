@@ -1,0 +1,21 @@
+{
+  "name": "lakshya",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lakshya - personal goal tracker",
+  "scripts": {
+    "sync": "npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/app": "^8.1.1",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/local-notifications": "^8.3.1",
+    "@fontsource/hanken-grotesk": "^5.3.0",
+    "@fontsource/newsreader": "^5.3.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.2"
+  }
+}
